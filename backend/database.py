@@ -8,6 +8,10 @@ DATABASE_URL = os.getenv(
     "postgresql://postgres:postgres@localhost:5432/inventory_db"
 )
 
+print("=" * 80)
+print("DATABASE_URL FROM ENV:", repr(DATABASE_URL))
+print("=" * 80)
+
 # Handle Render's postgres:// vs postgresql://
 if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
